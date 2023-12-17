@@ -1,0 +1,78 @@
+// Additional Tailwind directives: https://tailwindcss.com/docs/functions-and-directives/#responsive
+@layer utilities {
+  .dark-autofill {
+    -webkit-text-fill-color: #fff !important;
+  }
+  .light-autofill {
+    -webkit-text-fill-color: #000 !important;
+  }
+}
+
+// Webkit Utilities
+
+// Prevent drag
+.no-selector {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Scrollbar Edit  */
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #C3B1E1;
+  opacity: 0.5;
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #9e8db9;
+}
+
+/* Text Selection Colour  */
+::-moz-selection {
+  background: #C3B1E1;
+  color: #fff;
+}
+::-webkit-selection {
+  background: #C3B1E1;
+  color: #fff;
+}
+::selection {
+  background: #C3B1E1;
+  color: #fff;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s;
+  @apply dark-autofill;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

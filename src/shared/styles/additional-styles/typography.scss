@@ -1,0 +1,27 @@
+// Typography
+h1 {
+  @apply not-italic text-4xl font-extrabold leading-tight tracking-tighter;
+}
+
+h2 {
+  @apply not-italic text-3xl font-extrabold leading-tight tracking-tighter;
+}
+
+h3 {
+  @apply not-italic font-normal text-3xl leading-10;
+  letter-spacing: 1px;
+}
+
+h4 {
+  @apply not-italic font-normal text-lg leading-6;
+  letter-spacing: 0.4px;
+}
+
+h5 {
+  @apply not-italic font-medium text-base leading-6;
+  letter-spacing: 0.4px;
+}
+
+p {
+  @apply text-sm leading-snug tracking-tight;
+}
