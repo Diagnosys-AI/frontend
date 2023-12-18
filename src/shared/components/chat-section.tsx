@@ -16,18 +16,18 @@ export default function ChatSection() {
 
   return (
     <div className="space-y-4 max-w-5xl w-full">
-      <ChatMessages
-        messages={messages}
-        isLoading={isLoading}
-        reload={reload}
-        stop={stop}
-      />
       <ChatInput
         input={input}
         handleSubmit={handleSubmit}
         handleInputChange={handleInputChange}
         isLoading={isLoading}
         multiModal={(MODEL as any) === "gpt-4-vision-preview"}
+      />
+      <ChatMessages
+        messages={messages}
+        isLoading={isLoading}
+        reload={reload}
+        stop={stop}
       />
     </div>
   );

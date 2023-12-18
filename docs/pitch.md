@@ -34,6 +34,8 @@ Current process is:
 
 ## Proposed Solution
 
+A query engine is an end-to-end pipeline that allows you to ask questions over your data. It takes in a natural language query, and returns a response, along with reference context retrieved and passed to the LLM.
+
 Use a MultiModal Retrieval-Augmented Generation (RAG) Stack, contexualised with best practice and resources (listed below) with an LLM (Gemini) to provide a comprehensive list of potential diagnoses, investigations and treatments. This will be a tool for Junior doctors, and will be input with the History taken from a patient. In the above process, it will fit in-between stage 3 and 4. In detail:
 
 - Input (LLM be prompted with) History, Examinations done and (in the future) Patient Records
