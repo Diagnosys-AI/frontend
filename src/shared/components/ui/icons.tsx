@@ -21,6 +21,19 @@ function IconNextChat({
   );
 }
 
+function IconDiagnosys({ className, ...props }: { className: string | null }) {
+  return (
+    <Image
+      className={cn("rounded-md", className)}
+      src="/images/diagnosys.png"
+      alt="Diagnosys Logo"
+      width={24}
+      height={24}
+      priority
+    />
+  );
+}
+
 function IconOpenAI({ className, ...props }: React.ComponentProps<"svg">) {
   return (
     <svg
@@ -437,4 +450,5 @@ export {
   IconUsers,
   IconExternalLink,
   IconChevronUpDown,
+  IconDiagnosys,
 };

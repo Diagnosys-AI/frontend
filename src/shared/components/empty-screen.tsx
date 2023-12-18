@@ -2,6 +2,10 @@ import { UseChatHelpers } from "ai/react";
 import { HistoryForm } from "@/components/history-form";
 
 export function EmptyScreen({ setInput }: Pick<UseChatHelpers, "setInput">) {
+  let onSubmit = (data: any) => {
+    console.log("data");
+  };
+
   return (
     <div className="mx-auto max-w-2xl px-4">
       <div className="rounded-lg border bg-background p-8">
@@ -23,7 +27,7 @@ export function EmptyScreen({ setInput }: Pick<UseChatHelpers, "setInput">) {
 
         <hr className="my-4" />
 
-        <HistoryForm />
+        <HistoryForm onSubmitFn={onSubmit} />
       </div>
     </div>
   );

@@ -29,7 +29,16 @@ import { toast } from "react-hot-toast";
 import React from "react";
 
 const FormSchema = z.object({
+  introduction: z.string(),
+  presentingComplaint: z.string(),
+  socrates: z.string(),
+  specificSystemsReview: z.string(),
+  generalSystemsReview: z.string(),
   ice: z.string(),
+  pastMedicalHistory: z.string(),
+  medicationHistory: z.string(),
+  socialHistory: z.string(),
+  familyHistory: z.string(),
 });
 
 const HistoryFormField = ({
@@ -76,7 +85,7 @@ const HistoryFormField = ({
   );
 };
 
-export function HistoryForm() {
+export function HistoryForm({ onSubmitFn }: { onSubmitFn: any }) {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
   });
@@ -91,6 +100,7 @@ export function HistoryForm() {
         </pre>
       ),
     });
+    onSubmitFn(data);
   }
 
   return (
