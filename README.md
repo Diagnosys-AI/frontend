@@ -66,4 +66,4 @@ Resources that will familiarize you with Gemini AI
 To learn more about LlamaIndex, take a look at the following resources:
 
 - [LlamaIndex Documentation](https://docs.llamaindex.ai) - learn about LlamaIndex (Python features).
-- [LlamaIndexTS Documentation](https://ts.llamaindex.ai) - learn about LlamaIndex (Typescript features).
+- [LlamaIndexTS Documentation](https://ts.llamaindex.ai) - learn about LlamaIndex (Typescript features)
