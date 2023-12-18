@@ -1,8 +1,12 @@
-import "@/styles/globals.scss";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Toaster } from "react-hot-toast";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 
-const inter = Inter({ subsets: ["latin"] });
+import "@/styles/globals.scss";
+import { cn } from "@/lib/utils";
+import { Providers } from "@/components/providers";
+import { Header } from "@/components/header";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${process.env.VERCEL_URL}`),
@@ -30,7 +34,29 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>{children}</body>
+      <body
+        className={cn(
+          "font-sans antialiased",
+          GeistSans.variable,
+          GeistMono.variable
+        )}
+      >
+        <Toaster />
+        <Providers
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="flex flex-col min-h-screen">
+            {/* @ts-ignore */}
+            <Header />
+            <main className="flex flex-col flex-1 background-gradient dark:background-gradient-dark">
+              {children}
+            </main>
+          </div>
+        </Providers>
+      </body>
     </html>
   );
 }
