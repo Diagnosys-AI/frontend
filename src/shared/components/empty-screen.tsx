@@ -1,56 +1,30 @@
-import { UseChatHelpers } from 'ai/react'
+import { UseChatHelpers } from "ai/react";
+import { HistoryForm } from "@/components/history-form";
 
-import { Button } from '@/components/ui/button'
-import { ExternalLink } from '@/components/external-link'
-import { IconArrowRight } from '@/components/ui/icons'
-
-const exampleMessages = [
-  {
-    heading: 'Explain technical concepts',
-    message: `What is a "serverless function"?`
-  },
-  {
-    heading: 'Summarize an article',
-    message: 'Summarize the following article for a 2nd grader: \n'
-  },
-  {
-    heading: 'Draft an email',
-    message: `Draft an email to my boss about the following: \n`
-  }
-]
-
-export function EmptyScreen({ setInput }: Pick<UseChatHelpers, 'setInput'>) {
+export function EmptyScreen({ setInput }: Pick<UseChatHelpers, "setInput">) {
   return (
     <div className="mx-auto max-w-2xl px-4">
       <div className="rounded-lg border bg-background p-8">
         <h1 className="mb-2 text-lg font-semibold">
-          Welcome to Next.js AI Chatbot!
+          Welcome to Diagnosys AI 🩺
         </h1>
         <p className="mb-2 leading-normal text-muted-foreground">
-          This is an open source AI chatbot app template built with{' '}
-          <ExternalLink href="https://nextjs.org">Next.js</ExternalLink> and{' '}
-          <ExternalLink href="https://vercel.com/storage/kv">
-            Vercel KV
-          </ExternalLink>
-          .
+          Diagnosys AI a tool tailored and aimed at the UK's medical students
+          and junior doctors (F1's, F2's, and IMT1's). Diagnosys AI is designed
+          to alleviate the challenges of diagnostic uncertainty and efficiency
+          that junior doctors frequently encounter. Our solution focuses on
+          streamlining the diagnostic process, enhancing decision-making, and
+          ultimately contributing to better patient outcomes, as well as
+          constituting a useful learning tool for medical students.
         </p>
-        <p className="leading-normal text-muted-foreground">
-          You can start a conversation here or try the following examples:
+        <p className="mb-2 leading-normal text-muted-foreground">
+          Fill out the history form below to get started!
         </p>
-        <div className="mt-4 flex flex-col items-start space-y-2">
-          {exampleMessages.map((message, index) => (
-            <Button
-              key={index}
-              variant="link"
-              className="h-auto p-0 text-base"
-              onClick={() => setInput(message.message)}
-            >
-              <IconArrowRight className="mr-2 text-muted-foreground" />
-              {message.heading}
-            </Button>
-          ))}
-        </div>
+
+        <hr className="my-4" />
+
+        <HistoryForm />
       </div>
     </div>
-  )
+  );
 }

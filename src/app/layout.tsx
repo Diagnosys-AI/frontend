@@ -2,7 +2,7 @@ import { Toaster } from "react-hot-toast";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 
-import "@/styles/globals.scss";
+import "@/styles/global.scss";
 import { cn } from "@/lib/utils";
 import { Providers } from "@/components/providers";
 import { Header } from "@/components/header";

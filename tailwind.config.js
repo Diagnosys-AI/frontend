@@ -69,6 +69,7 @@ module.exports = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: 0 }
         },
+        
         'slide-from-left': {
           '0%': {
             transform: 'translateX(-100%)'
