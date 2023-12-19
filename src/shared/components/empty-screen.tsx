@@ -39,13 +39,14 @@ export function EmptyScreen({ id, append }: EmptyScreenProps) {
           Welcome to Diagnosys AI 🩺
         </h1>
         <p className="mb-2 leading-normal text-muted-foreground">
-          Diagnosys AI a tool tailored and aimed at the UK's medical students
-          and junior doctors (F1's, F2's, and IMT1's). Diagnosys AI is designed
-          to alleviate the challenges of diagnostic uncertainty and efficiency
-          that junior doctors frequently encounter. Our solution focuses on
-          streamlining the diagnostic process, enhancing decision-making, and
-          ultimately contributing to better patient outcomes, as well as
-          constituting a useful learning tool for medical students.
+          Diagnosys AI a tool tailored and aimed at the UK&lsquo;s medical
+          students and junior doctors (F1&lsquo;s, F2&lsquo;s, and
+          IMT1&lsquo;s). Diagnosys AI is designed to alleviate the challenges of
+          diagnostic uncertainty and efficiency that junior doctors frequently
+          encounter. Our solution focuses on streamlining the diagnostic
+          process, enhancing decision-making, and ultimately contributing to
+          better patient outcomes, as well as constituting a useful learning
+          tool for medical students.
         </p>
         <p className="mb-2 leading-normal text-muted-foreground">
           Fill out the history form below to get started!
