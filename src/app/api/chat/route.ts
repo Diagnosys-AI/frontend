@@ -5,7 +5,7 @@ import { nanoid } from "@/lib/utils";
 
 export const runtime = "edge";
 
-export const onStreamComplete = async (
+const onStreamComplete = async (
   userId: string,
   json: {
     id?: string;
