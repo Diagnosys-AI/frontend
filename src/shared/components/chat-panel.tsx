@@ -43,7 +43,7 @@ export function ChatPanel({
         <div className="flex items-center justify-center h-12">
           {isLoading ? (
             <Button
-              variant="outline"
+              variant="secondary"
               onClick={() => stop()}
               className="bg-background"
             >
@@ -53,14 +53,14 @@ export function ChatPanel({
           ) : (
             messages?.length >= 2 && (
               <div className="flex space-x-2">
-                <Button variant="outline" onClick={() => reload()}>
+                <Button variant="secondary" onClick={() => reload()}>
                   <IconRefresh className="mr-2" />
                   Regenerate response
                 </Button>
                 {id && title ? (
                   <>
                     <Button
-                      variant="outline"
+                      variant="secondary"
                       onClick={() => setShareDialogOpen(true)}
                     >
                       <IconShare className="mr-2" />
@@ -90,6 +90,9 @@ export function ChatPanel({
                 id,
                 content: value,
                 role: "user",
+                data: {
+                  form: false,
+                },
               });
             }}
             input={input}

@@ -1,0 +1,3 @@
+- form to backend
+- save the form for the 1st message, and the respionses and quereys for subsequent ones
+- querys useChat

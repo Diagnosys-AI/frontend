@@ -22,10 +22,10 @@ export function Chat({ id, initialMessages, className }: ChatProps) {
     useChat({
       initialMessages,
       id,
-
       body: {
         id,
       },
+      sendExtraMessageFields: true,
       onResponse(response) {
         if (response.status === 401) {
           toast.error(response.statusText);
@@ -47,7 +47,7 @@ export function Chat({ id, initialMessages, className }: ChatProps) {
             <ChatScrollAnchor trackVisibility={isLoading} />
           </>
         ) : (
-          <EmptyScreen setInput={setInput} />
+          <EmptyScreen append={append} id={id} />
         )}
       </div>
       <ChatPanel
