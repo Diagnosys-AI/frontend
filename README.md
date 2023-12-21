@@ -1,5 +1,7 @@
 # Gemini Hackathon Project Frontend
 
+The project is deployed [here](https://diagnosys-ai.vercel.app/)
+
 Gemini AI by Google DeepMind – is a groundbreaking multimodal AI model that seamlessly integrates text, code, audio, image, and video. Standout Features:
 
 - **Seamless Multimodal Integration:** Gemini AI sets a new standard in processing and synthesizing varied types of information.
