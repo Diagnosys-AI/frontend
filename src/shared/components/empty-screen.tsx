@@ -18,7 +18,6 @@ export function EmptyScreen({ id, append }: EmptyScreenProps) {
     socialHistory: string;
     familyHistory: string;
   }) => {
-    console.log(data);
     let displayMessage = `# Diagnosys AI: History Form\n\n1. **Introduction:**\n\n\t${data.introduction}\n\n2. **Presenting Complaint (PC):**\n\n\t${data.presentingComplaint}\n\n3. **History of Presenting Complaint (HxPC):**\n\n\tFrom listening to the patient’s HxPC, you start to form an idea of the nature of the problem.\n\n\t- **SOCRATES**: ${data.socrates}\n\n\t- **Specific Systems Review**: ${data.specificSystemsReview}\n\n\t- **General Systems Review**: ${data.generalSystemsReview}\n\n\t- **ICE**: ${data.ice}\n\n4. **Past Medical History (PMHx):**\n\n\t${data.pastMedicalHistory}"\n\n5. **Medication History (MHx):**\n\n\t${data.medicationHistory}\n\n6. **Social History (SHx):**\n\n\t${data.socialHistory}\n\n7. **Family History (FHx):**\n\n\t${data.familyHistory}`;
 
     await append({
